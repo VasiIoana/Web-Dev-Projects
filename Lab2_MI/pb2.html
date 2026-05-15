@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #fff0f5; 
+            overflow: hidden;
+        }
+
+        .trigger-zone {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 120px; /* A bit taller than the ball to make hovering easier */
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ball {
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle at 30% 30%, #ffd1dc, #ff9aa2); 
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(255, 154, 162, 0.3);
+            position: absolute;
+            top: 20px;
+            pointer-events: none; /* The mouse "ignores" the ball and hits the zone instead */
+        }
+
+        /*when the zone is hovered, move the ball */
+        .trigger-zone:hover .ball {
+            animation: dropAndJump 2.5s infinite ease-in-out;
+        }
+
+        @keyframes dropAndJump {
+            0%, 100% { 
+                top: 20px; 
+                transform: scale(1);
+            }
+            45% {
+                transform: scale(1); /* Keep round while falling */
+            }
+            50% { 
+                /* Hits the very bottom of any screen */
+                top: calc(100vh - 90px); 
+                transform: scale(1.2, 0.8); 
+            }
+            55% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="trigger-zone">
+        <div class="ball"></div>
+    </div>
+
+</body>
+</html>

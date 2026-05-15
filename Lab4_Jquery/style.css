@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#content-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.content-block {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#loading-message {
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+    font-weight: bold;
+}

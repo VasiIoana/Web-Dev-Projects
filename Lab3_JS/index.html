@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image gallery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Image Gallery - Hover preview</h2>
+        <div class="thumbnails">
+            <img src="https://picsum.photos/id/10/150/100" alt="Landscape 1" class="thumb-img" data-full="https://picsum.photos/id/10/600/400">
+            <img src="https://picsum.photos/id/20/150/100" alt="Landscape 2" class="thumb-img" data-full="https://picsum.photos/id/20/600/400">
+            <img src="https://picsum.photos/id/30/150/100" alt="Landscape 3" class="thumb-img" data-full="https://picsum.photos/id/30/600/400">
+        </div>
+
+        <div class="preview-container">
+            <h3>Preview:</h3>
+            <img id="main-image" src="https://picsum.photos/id/10/600/400" alt="Main Preview">
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* Flexbox centering */
+            display: flex;
+            justify-content: center; /* Horizontal center */
+            align-items: center;     /* Vertical center */
+            background-color: #f0fff0; 
+            overflow: hidden;
+        }
+
+        /* The container for the cube and its shadow */
+        .scene {
+            position: relative;
+            width: 80px;  /* Match cube width */
+            height: 380px; /* The total height of the jump area */
+            display: flex;
+            justify-content: center;
+        }
+
+        .cube {
+            width: 60px;
+            height: 60px;
+            background-color: #b39ddb; 
+            border-radius: 12px;
+            position: absolute;
+            top: 0;
+            /* Animation for movement and color */
+            animation: bounceAndColor 2s infinite ease-in-out;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .shadow {
+            width: 60px;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            /* Animation for scaling with the cube */
+            animation: shadowScale 2s infinite ease-in-out;
+        }
+
+        @keyframes bounceAndColor {
+            /* PEAK: At the top */
+            0%, 100% { 
+                top: 0; 
+                background-color: #ffb7b2; 
+                transform: scale(1);
+            }
+            /* FLOOR: At the bottom */
+            50% { 
+                top: 320px; 
+                background-color: #b2e2f2; 
+                transform: scale(1.1, 0.9); /* Subtle squish on impact */
+            }
+        }
+
+        @keyframes shadowScale {
+            0%, 100% { 
+                transform: scale(1.5); 
+                opacity: 0.2; 
+            }
+            50% { 
+                transform: scale(0.8); 
+                opacity: 0.5; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="cube"></div>
+        <div class="shadow"></div>
+    </div>
+
+</body>
+</html>
