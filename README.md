@@ -9,11 +9,9 @@ This repository contains a collection of web development projects developed duri
 *   **Requirements:** No CSS or JavaScript allowed. Use of specific tags like `<table>`, `<svg>`, `<audio>`, `<video>`, and structural elements (`<header>`, `<footer>`, `<article>`, etc.).
 *   **Theme:** Personal interest page (Nature/Sounds).
 
-### [Lab 2: Advanced CSS & Cloning](Lab_2/ & Lab2_MI/)
-*   **Yahoo Clone:** Recreating approximately 90% of a screen from Yahoo.com using only HTML and CSS (no libraries allowed).
-*   **CSS Animations (Lab2_MI):** 
-    *   3D bouncing cube with dynamic shadows and color transitions.
-    *   Interactive ball animation that drops and jumps on hover.
+### Lab 2: Advanced CSS & Cloning
+*   **[Yahoo Clone](Lab_2/):** Recreating approximately 90% of a screen from Yahoo.com using only HTML and CSS.
+*   **[CSS Animations](Lab2_MI/):** 3D bouncing cube and interactive ball animation.
 
 ### [Lab 3: JavaScript Interactivity](Lab3_JS/)
 *   **Objective:** Dynamic image gallery.
